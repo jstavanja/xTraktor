@@ -1,20 +1,20 @@
 # xTraktor
 
-![](logotip.png)
-
 Structured data extractor for the modern world wide web.
 
 ## What is this?
+Implementation of 3 approaches to structured data extraction:
+- using [r̎͒̔̓̒e̊ͯ̎̔̏̾͆ͤ͆ͬg̃̏ͨͣ̑̑ͧ̆̓͐ͬͥ͂͗̍uͮͫ̽ͪ͆̆̈́̓͆l̒̀̔̾͛ͮ͗̊̓aͣͨͮ̐͋̏͛̉͋ͭ̏̓͑ͮ͌̄̽͑̚r͂̓ͫ͋ͯͪͧ̑͐͛ͪͮͮͨ̌̄̈ ͮ̾ͦ͂̌ͩͧ́̈́eͣ̀ͯͧ̿ͧ̂x̓͂̃̈́ͬͫ͗ͯ̔ͮ̂̃̅̓ͤͮ̈͑p̎ͭ̌ͤ̋͑ͮ̇̀͒ͫ̽̐̀̚rͪͭ̑̾̄ͫeͤͪ̽ͭ͊ͯ́̂̊ͧ͑ͩ̃͋ͥ͒̓̈́̑s̒ͨ̋̎̿͐͋ͥ̎s̏̅̽ͦ̐̈́ͣ͋̚i̽ͪ̊ͥͯ͆͛̋ͪo͌̊̈́̐̓͂͐͂͊͋̍́͆nͣ̀̽ͫ͆ͩ͒́̆ͦ̐͒̾sͤ̄̿̆͌](https://stackoverflow.com/a/1732454),
+- using XPath,
+- using RoadRunner-like implementation.
 
-Have you ever tried to extract valuable information quickly to create a JSON file for a REST api from a site and were simply too misled by the local hotties ads?
+Usage demonstrated on sample pages from 4 websites: [overstock.com](https://www.overstock.com/), 
+[rtvslo.si](https://www.rtvslo.si/), **[TBD]** and **[TBD]**.
 
-We have a simple solution - just use this tool to extract all the good data from any website using three different state of the art methods.
-
-JK - this is an implementation of a relatively simple data extractor for creating more structured files with information from websites using regular expressions, XPath and a RoadRunner-like approach. It is implemented for the purposes of the second assignment in the Web information extraction and retrieval course.
+This is the second assignment in the **Web information extraction and retrieval** course.
 
 ## Brief guidelines (for development)
 
-When writing regex, either explain it (comment the code) like you would explain it to a monkey or use something other than regex for solving the problem.
-Comment non-obvious code.
+TBD (maybe)
 
-2019, Jaka Stavanja, Matej Klemen & Andraz Povse
+2019, Jaka Stavanja, Matej Klemen & Andraž Povše
