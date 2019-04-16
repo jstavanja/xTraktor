@@ -8,8 +8,9 @@ Implementation of 3 approaches to structured data extraction:
 - using XPath,
 - using RoadRunner-like implementation.
 
-Usage demonstrated on sample pages from 4 websites: [overstock.com](https://www.overstock.com/), 
-[rtvslo.si](https://www.rtvslo.si/), **[TBD]** and **[TBD]**.
+Usage demonstrated on sample pages from 3 websites: [overstock.com](https://www.overstock.com/), 
+[rtvslo.si](https://www.rtvslo.si/) and [avto.net](https://www.avto.net/). We have gathered two
+pages from each website.
 
 This is the second assignment in the **Web information extraction and retrieval** course.
 
