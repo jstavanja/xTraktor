@@ -112,6 +112,61 @@ class RegexParser:
 
         return json.dumps(parsed_content)
 
+    def parse_avtonet(self, html):
+        """
+        Parses all the necessary information from the HTML content provided and
+        return a JSON object in a string.
+
+        The information acquired from the HTML contains: Name, FirstRegistration, Kilometers, FuelType, Displacement,
+                                                         Power, Transmission, Price
+
+        Parameters
+        ----------
+        html:
+           HTML content to parse information from.
+
+        Returns
+        -------
+        str:
+           JSON object with the information in the string format.
+        """
+        name_regex = r"<a class=\"Adlink\"[\S\s]*?<span>(.*)<\/span>"
+        first_registration_regex = r"<ul>[\s\n\r]*<li>Letnik 1.registracije:(.*)<\/li>"
+        kilometers_regex = r"<\/li>[\s\t\n]*<li>([0-9]*) km<\/li>"
+        fuel_type_regex = r"<\/li>[\s\t\n]*<li>[0-9]* km<\/li><li>(diesel|bencin)"
+        displacement_regex = r"<\/li>[\s\t\n]*<li>[0-9]* km<\/li>[\S\s]*?([0-9]*) ccm"
+        power_regex = r"<\/li>[\s\t\n]*<li>[0-9]* km<\/li>[\S\s]*?([0-9]*)\skW"
+        transmission_regex = r"<\/li>[\s\t\n]*<li>[0-9]* km<\/li>[\S\s]*?(ročni|avtomatski)\smenjalnik"
+        price_regex = r"<div class=\"ResultsAdPriceLogo\"[\S\s]*?([^\t\n>]*?€|Pokličite za ceno!)"
+
+        # find list of lists, that include all matches for each regex
+        regex_matches = self.find_all_matches(html=html,
+                                              regex_list=[name_regex, first_registration_regex, kilometers_regex,
+                                                          fuel_type_regex, displacement_regex, power_regex,
+                                                          transmission_regex, price_regex])
+
+        # bundle them into items
+        items = list(zip(*regex_matches))
+
+        items_processed = []
+        for item in items:
+            items_processed.append({
+                "name": item[0],
+                "first_registration": item[1],
+                "kilometers": item[2],
+                "fuel_type": "petrol" if item[3] == "bencin" else "diesel",
+                "displacement_ccm": item[4],
+                "power_kw": item[5],
+                "transmission": "automatic" if item[6] == "avtomatski" else "manual",
+                "price": None if item[7] == "Pokličite za ceno!" else item[7]
+            })
+
+        parsed_content = {
+            "items": items_processed
+        }
+
+        return json.dumps(parsed_content)
+
     def find_first_matches(self, html: str, regex_list: List[str]) -> List[str]:
         """
         Finds first occurences of regex matches and returns them, bundled as a list of strings.
@@ -164,5 +219,8 @@ if __name__ == '__main__':
     #     '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
     # print(rp.parse_rtvslo(pageContent))
 
-    pageContent = rp.get_html_from_file('../input/overstock.com/jewelry01.html')
-    print(rp.parse_overstock(pageContent))
+    # pageContent = rp.get_html_from_file('../input/overstock.com/jewelry01.html')
+    # print(rp.parse_overstock(pageContent))
+
+    pageContent = rp.get_html_from_file('../input/avtonet/benz.htm')
+    print(rp.parse_avtonet(pageContent))
