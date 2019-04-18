@@ -14,6 +14,23 @@ pages from each website.
 
 This is the second assignment in the **Web information extraction and retrieval** course.
 
+## Setup
+**[Optional]** Create a virtualenv and activate it.
+```
+$ virtualenv --python=python3 --system-site-packages wiervenv
+$ source wiervenv/bin/activate
+```
+  
+Install required dependencies.
+```
+$ pip3 install -r requirements.txt
+```
+  
+Install in dev mode.
+```
+$ python3 setup.py develop
+```
+
 ## Brief guidelines (for development)
 
 TBD (maybe)
