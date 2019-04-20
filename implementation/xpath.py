@@ -51,6 +51,67 @@ def parse_rtvslo(html):
     return json.dumps(parsed_content)
 
 
+def parse_overstock(html):
+    """
+    Parses all the necessary information from the HTML content provided and
+    return a JSON object in a string.
+
+    The information acquired from the HTML contains:  Title, Content, Price, 
+    ListPrice, Saving, SavingPercent, Content
+
+    Parameters
+    ----------
+    html:
+        HTML content to parse information from.
+
+    Returns
+    -------
+    str:
+        JSON object with the information in the string format.
+    """
+    # Base location for each item
+    item_base_location = """/html/body/table/tbody/tr/td[5]
+                    /table/tbody/tr/td
+                    /table/tbody/tr/td
+                    /table/tbody/tr/td"""
+
+    title_query = item_base_location + "/a/b/text()"
+    list_price_query = item_base_location + """/table/tbody/tr/td
+                    /table/tbody/tr/td/s/text()"""
+    price_query = item_base_location + """/table/tbody/tr/td
+                    /table/tbody/tr/td/span/b/text()"""
+    # TODO: Split the 'saving' and 'saving_percent'. Can we split with python or must with xPath?
+    saving_query = item_base_location + """/table/tbody/tr/td
+                    /table/tbody/tr/td/span/text()"""
+    saving_percent_query = item_base_location + """/table/tbody/tr/td
+                    /table/tbody/tr/td/span/text()"""
+    content_query = item_base_location + "/table/tbody/tr/td/span/text()"
+
+    #  Find all matches for the items
+    query_matches = find_all_matches(html=html,
+                                       query_list=[title_query, list_price_query, price_query,
+                                        saving_query, saving_percent_query, content_query])
+
+    items = list(zip(*query_matches))
+    #  Place all products in a list
+    items_processed = []
+    for item in items:
+        items_processed.append({
+            "title": item[0],
+            "list_price": item[1],
+            "price": item[2],
+            "saving": item[3],
+            "saving_percent:": item[4],
+            "content": item[5]
+            })
+
+    parsed_content = {
+        "items": items_processed
+    }
+
+    return json.dumps(parsed_content)
+
+
 def find_first_matches(html, query_list):
     """
     Finds first occurences of xPath results and returns them, bundled as a list of strings.
@@ -101,6 +162,9 @@ def find_all_matches(html, query_list):
 
 
 if __name__ == '__main__':
+    # pageContent = get_html_from_file(
+	#         '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
+    # print(parse_rtvslo(pageContent))
     pageContent = get_html_from_file(
-        '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
-    print(parse_rtvslo(pageContent))
+        '../input/overstock.com/jewelry01.html', encoding="iso 8859-1")
+    print(parse_overstock(pageContent))
