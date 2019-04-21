@@ -80,17 +80,14 @@ def parse_overstock(html):
                     /table/tbody/tr/td/s/text()"""
     price_query = item_base_location + """/table/tbody/tr/td
                     /table/tbody/tr/td/span/b/text()"""
-    # TODO: Split the 'saving' and 'saving_percent'. Can we split with python or must with xPath?
-    saving_query = item_base_location + """/table/tbody/tr/td
-                    /table/tbody/tr/td/span/text()"""
-    saving_percent_query = item_base_location + """/table/tbody/tr/td
+    saving_fixed_and_percent_query = item_base_location + """/table/tbody/tr/td
                     /table/tbody/tr/td/span/text()"""
     content_query = item_base_location + "/table/tbody/tr/td/span/text()"
 
     #  Find all matches for the items
     query_matches = find_all_matches(html=html,
                                        query_list=[title_query, list_price_query, price_query,
-                                        saving_query, saving_percent_query, content_query])
+                                       saving_fixed_and_percent_query, content_query])
 
     items = list(zip(*query_matches))
     #  Place all products in a list
@@ -100,9 +97,83 @@ def parse_overstock(html):
             "title": item[0],
             "list_price": item[1],
             "price": item[2],
-            "saving": item[3],
-            "saving_percent:": item[4],
-            "content": item[5]
+            "saving": item[3].split(" ")[0],
+            "saving_percent:": (item[3].split(" ")[1]).replace('(', '').replace(')', ''),
+            "content": item[4]
+            })
+
+    parsed_content = {
+        "items": items_processed
+    }
+
+    return json.dumps(parsed_content)
+
+
+def parse_avtonet(html):
+    """
+    Parses all the necessary information from the HTML content provided and
+    return a JSON object in a string.
+
+    The information acquired from the HTML contains:  Name, First Registration,
+    Kilometers, Fuel Type, Displacement, Power, Transmission, Price
+
+    Parameters
+    ----------
+    html:
+        HTML content to parse information from.
+
+    Returns
+    -------
+    str:
+        JSON object with the information in the string format.
+    """
+    data_base_query = "//*[@class=\"ResultsAdDataTop\"]"
+
+    name_query = data_base_query + "/a/span/text()"
+    first_registration_query = data_base_query + "/ul/li[1]/text()"
+    kilometers_query = data_base_query + "/ul/li[2]/text()"
+    fuel_type_displacement_power_query = data_base_query + "/ul/li[3]/text()"
+    transmission_query =  data_base_query + "/ul/li[4]/text()"
+    # TODO: Price doesnt get all prices, only 6. Others are empty strings.
+    price_query = "//*[@class=\"ResultsAdPrice\"]/text()"
+    
+
+
+    #  Find all matches for the items
+    query_matches = find_all_matches(html=html,
+                                       query_list=[name_query, first_registration_query,
+                                       kilometers_query, fuel_type_displacement_power_query, 
+                                       transmission_query, price_query])
+
+    items = list(zip(*query_matches))
+    #  Place all products in a list
+    items_processed = []
+    for item in items:
+        try :
+            kilometers = item[2]
+            fuel_type = item[3].split(',')[0]
+            displacement = item[3].split(',')[1]
+            power = item[3].split(',')[2]
+            transmission = item[4]
+            price = item[5].replace("\n", "").replace("\t", "").replace(" ", "")
+        except IndexError:
+            # Sometimes there are no kilometers of a car displayed
+            kilometers = 0
+            fuel_type = item[2].split(',')[0]
+            displacement = item[2].split(',')[1]
+            power = item[2].split(',')[2]
+            transmission = item[3]
+            price = item[4].replace("\n", "").replace("\t", "").replace(" ", "")
+
+        items_processed.append({
+            "title": item[0],
+            "first_registration": item[1][-4:], # Last 4 characters represent year,
+            "kilometers": kilometers,
+            "fuel_type": "petrol" if fuel_type == "bencin" else "diesel",
+            "displacement": displacement,
+            "power": power,
+            "transmission": "automatic" if transmission == "avtomatski" else "manual",
+            "price": None if price == "Pokličite za ceno!" else price
             })
 
     parsed_content = {
@@ -165,6 +236,9 @@ if __name__ == '__main__':
     # pageContent = get_html_from_file(
 	#         '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
     # print(parse_rtvslo(pageContent))
+    # pageContent = get_html_from_file(
+    #     '../input/overstock.com/jewelry01.html', encoding="iso 8859-1")
+    # print(parse_overstock(pageContent))
     pageContent = get_html_from_file(
-        '../input/overstock.com/jewelry01.html', encoding="iso 8859-1")
-    print(parse_overstock(pageContent))
+        '../input/avtonet/benz.htm', encoding='iso 8859-1')
+    print(parse_avtonet(pageContent))
