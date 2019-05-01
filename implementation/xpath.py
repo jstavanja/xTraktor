@@ -29,8 +29,8 @@ def parse_rtvslo(html):
     content_query = "//*[@class=\"Body\"]/text()"
 
     query_matches = find_first_matches(html=html,
-                                       query_list=[author_query, published_time_query, title_query, subtitle_query,
-                                                   lead_query])
+                                       query_list=[author_query, published_time_query, title_query,
+                                                   subtitle_query, lead_query])
 
     # Find all <p class="Body">...</p> elements and get their texts
     # Take the first element from the matches, as we get a list of lists back for all queries in the query_list.
@@ -86,8 +86,8 @@ def parse_overstock(html):
 
     #  Find all matches for the items
     query_matches = find_all_matches(html=html,
-                                       query_list=[title_query, list_price_query, price_query,
-                                       saving_fixed_and_percent_query, content_query])
+                                     query_list=[title_query, list_price_query, price_query,
+                                                 saving_fixed_and_percent_query, content_query])
 
     items = list(zip(*query_matches))
     #  Place all products in a list
@@ -133,29 +133,29 @@ def parse_avtonet(html):
     first_registration_query = data_base_query + "/ul/li[1]/text()"
     kilometers_query = data_base_query + "/ul/li[2]/text()"
     fuel_type_displacement_power_query = data_base_query + "/ul/li[3]/text()"
-    transmission_query =  data_base_query + "/ul/li[4]/text()"
-    # TODO: Price doesnt get all prices, only 6. Others are empty strings.
-    price_query = "//*[@class=\"ResultsAdPrice\"]/text()"
-    
-
+    transmission_query = data_base_query + "/ul/li[4]/text()"
+    # this is hacked together, but wcyd (normalizing spaces did not help)
+    price_query = "//div[@class='ResultsAdPrice']/text()[contains(., '\n\t\t\t\t\t\t')]|" \
+                  "//div[@class='ResultsAdPrice ResultsAdPriceAkcija']/p[@class='AkcijaCena']/text()"
 
     #  Find all matches for the items
     query_matches = find_all_matches(html=html,
-                                       query_list=[name_query, first_registration_query,
-                                       kilometers_query, fuel_type_displacement_power_query, 
-                                       transmission_query, price_query])
+                                     query_list=[name_query, first_registration_query,
+                                                 kilometers_query, fuel_type_displacement_power_query,
+                                                 transmission_query, price_query])
 
     items = list(zip(*query_matches))
     #  Place all products in a list
     items_processed = []
     for item in items:
-        try :
+        try:
             kilometers = item[2]
             fuel_type = item[3].split(',')[0]
             displacement = item[3].split(',')[1]
             power = item[3].split(',')[2]
             transmission = item[4]
-            price = item[5].replace("\n", "").replace("\t", "").replace(" ", "")
+            # \x80 is Latin encoding for '€'
+            price = item[5].replace('\x80', '€').strip()
         except IndexError:
             # Sometimes there are no kilometers of a car displayed
             kilometers = 0
@@ -163,11 +163,11 @@ def parse_avtonet(html):
             displacement = item[2].split(',')[1]
             power = item[2].split(',')[2]
             transmission = item[3]
-            price = item[4].replace("\n", "").replace("\t", "").replace(" ", "")
+            price = item[4].replace('\x80', '€').strip()
 
         items_processed.append({
             "title": item[0],
-            "first_registration": item[1][-4:], # Last 4 characters represent year,
+            "first_registration": item[1][-4:],  # Last 4 characters represent year
             "kilometers": kilometers,
             "fuel_type": "petrol" if fuel_type == "bencin" else "diesel",
             "displacement": displacement,
