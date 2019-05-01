@@ -48,7 +48,7 @@ def parse_rtvslo(html):
         "content": content
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def parse_overstock(html):
@@ -106,7 +106,7 @@ def parse_overstock(html):
         "items": items_processed
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def parse_avtonet(html):
@@ -180,7 +180,7 @@ def parse_avtonet(html):
         "items": items_processed
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def find_first_matches(html, query_list):

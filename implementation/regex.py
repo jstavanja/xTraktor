@@ -40,7 +40,7 @@ def parse_rtvslo(html):
         "content": regex_matches[5]
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def parse_overstock(html):
@@ -91,7 +91,7 @@ def parse_overstock(html):
         "items": items_processed
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def parse_avtonet(html):
@@ -147,7 +147,7 @@ def parse_avtonet(html):
         "items": items_processed
     }
 
-    return json.dumps(parsed_content)
+    return json.dumps(parsed_content, ensure_ascii=False)
 
 
 def find_first_matches(html, regex_list):
@@ -204,5 +204,5 @@ if __name__ == '__main__':
     # pageContent = get_html_from_file('../input/overstock.com/jewelry01.html')
     # print(parse_overstock(pageContent))
 
-    pageContent = get_html_from_file('../input/avtonet/benz.htm')
+    pageContent = get_html_from_file('../input/avtonet/benz.htm', encoding='cp1250')
     print(parse_avtonet(pageContent))
