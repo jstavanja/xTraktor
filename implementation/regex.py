@@ -197,12 +197,12 @@ def find_all_matches(html, regex_list):
 
 
 if __name__ == '__main__':
-    # pageContent = get_html_from_file(
-    #     '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
-    # print(parse_rtvslo(pageContent))
+    pageContent = get_html_from_file(
+        '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html', encoding="utf-8")
+    print(parse_rtvslo(pageContent))
 
-    # pageContent = get_html_from_file('../input/overstock.com/jewelry01.html')
-    # print(parse_overstock(pageContent))
+    pageContent = get_html_from_file('../input/overstock.com/jewelry01.html')
+    print(parse_overstock(pageContent))
 
     pageContent = get_html_from_file('../input/avtonet/benz.htm', encoding='cp1250')
     print(parse_avtonet(pageContent))
