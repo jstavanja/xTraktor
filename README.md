@@ -31,8 +31,21 @@ Install in dev mode.
 $ python3 setup.py develop
 ```
 
-## Brief guidelines (for development)
+## Running the parser
+`implementation/` contains the implementations of regular-expressions-based (`regex.py`) 
+and XPath-based (`xpath.py`) approaches. RoadRunner-like approach is **not implemented**.
+Running those files will produce the JSON outputs for files in the `input/` folder.  
 
-TBD (maybe)
+Assuming you are inside the `implementation/` directory:
+```
+$ python3 regex.py
+$ python3 xpath.py
+```
+
+## Project structure
+`input/` contains the 6 webpages from 3 sources, that are used to test the approaches.
+`implementation/` contains the source code of our implemented approaches.
+`report.pdf` (note: in root folder) contains our report for the assignment.
+
 
 2019, Jaka Stavanja, Matej Klemen & Andraž Povše
