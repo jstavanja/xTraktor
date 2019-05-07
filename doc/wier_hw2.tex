@@ -95,14 +95,12 @@ The data items and data records we are interested in are shown in Figure\ref{fig
 \label{section:methodology}
 
 In this section we describe our implementations of the approaches using regular expressions and XPath query language.
+The approach for extracting data from websites was split into two methods. One for the extraction of directly targeted elements that appear only once on the site (single items for the \textit{Rtvslo} website) and another for getting all results for elements that appear on a site multiple times (list items for the \textit{Overstock} website and \textit{Avto.net}). All the outputs that this extraction approach yields can be found in the git repository (in the folder \verb/output\regex\/, where each website has it's own JSON file).
 
 \subsection{Approach using regular expressions}
 \label{section:regex}
 
-The approach for extracting data from websites was split into two methods. One for the extraction of directly targeted elements that appear only once on the site (single items for the \textit{Rtvslo} website) and another for getting all results for elements that appear on a site multiple times (list items for the \textit{Overstock} website and \textit{Avto.net}). All the outputs that this extraction approach yields can be found in the git repository (in the folder \verb/output\regex\/, where each website has it's own JSON file).
-
 \subsubsection{Single items}
-
 The regular expressions for extracting single elements were written in such a way that they start to capture text when they encounter the targeted html element, which wraps the data that we wish to extract. To search for the exact element, we look at the HTML source of the webpage and find the tag and it's classes and attributes to refine the search pattern. For example, if we were searching for data inside the \mintinline{HTML}{<div class="author-name">Miha Merljak</div>} element, the regular expression would look like \verb/<div class=\"author-name\">(.*)<\/div>/. Here, we start by searching for the div element with the class \textit{author-name} and we create a capture group for all the characters that are there until we reach the closing tag. All of the other elements on this page were retrieved in a similar fashion, except for the elements whose tags didn't feature such a specific tag. In that case, we looked for their parent elements, that we could target and then skipped all characters, until we reached our desired nested tag, from which we then captured the text. That was done using an expression such as~\verb/<header class=\"parent\">[\S\s]*?<h1>(.*)<\/h1>/, where \verb/[\S\s]*?/ ignores all the characters (if there are any) until we reach our nested h1 tag. We find the first element that is captured by the regular expression on the input website, extract the text and send it into serialization. This approach was used for the Rtvslo elements' text retrieval.
 
 \subsubsection{List items}
@@ -151,7 +149,5 @@ We presented 2 approaches to structured data extraction from the Web: using regu
 We applied these methods to 6 webpages and provided the methods' output.
 The third, more general, approach to structured data extraction (using RoadRunner algorithm) was sadly not implemented.
 
-\bibliographystyle{IEEEtran}
-\bibliography{bibliography}
 
 \end{document}
