@@ -1,0 +1,192 @@
+{
+    "items": [{
+        "name": "Mercedes-Benz C-Razred 220CDI EXCLUSIVE-...",
+        "first_registration": "2015",
+        "kilometers": "179000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "manual",
+        "price": "16.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred 200 CDI Exclusive...",
+        "first_registration": "2015",
+        "kilometers": "155000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "16.490 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 d T Exclusi...",
+        "first_registration": "2015",
+        "kilometers": "152500",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "14.499 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 220 Avantgarde-...",
+        "first_registration": "2015",
+        "kilometers": "170000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "automatic",
+        "price": "15.900 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 d T Avantga...",
+        "first_registration": "2015",
+        "kilometers": "159928",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "automatic",
+        "price": "16.490 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T N...",
+        "first_registration": "2015",
+        "kilometers": "173883",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T A...",
+        "first_registration": "2015",
+        "kilometers": "123366",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "automatic",
+        "price": "8.000 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 250 d T 4Matic ...",
+        "first_registration": "2015",
+        "kilometers": "108000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "150",
+        "transmission": "automatic",
+        "price": null
+    }, {
+        "name": "Mercedes-Benz C-Razred C 220 BlueTEC T A...",
+        "first_registration": "2015",
+        "kilometers": "189000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "manual",
+        "price": "16.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 220 D EXECUTIVE...",
+        "first_registration": "2015",
+        "kilometers": "182000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "manual",
+        "price": "15.555 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 220 d Full LED",
+        "first_registration": "2015",
+        "kilometers": "170000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "manual",
+        "price": "16.500 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T",
+        "first_registration": "2015",
+        "kilometers": "158681",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "15.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC NAV...",
+        "first_registration": "2015",
+        "kilometers": "173221",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T",
+        "first_registration": "2015",
+        "kilometers": "170000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "automatic",
+        "price": "17.000 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T",
+        "first_registration": "2015",
+        "kilometers": "129102",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "16.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T E...",
+        "first_registration": "2015",
+        "kilometers": "158155",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "15.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200 BlueTEC T B...",
+        "first_registration": "2015",
+        "kilometers": "157000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "15.490 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 200D BUSINESS A...",
+        "first_registration": "2015",
+        "kilometers": "145000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "15.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 220 170ks 1.LAS...",
+        "first_registration": "2015",
+        "kilometers": "180558",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "125",
+        "transmission": "automatic",
+        "price": "16.499 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C 250 D Avt Avant...",
+        "first_registration": "2015",
+        "kilometers": "183250",
+        "fuel_type": "diesel",
+        "displacement_ccm": "2143",
+        "power_kw": "150",
+        "transmission": "automatic",
+        "price": "16.990 €"
+    }, {
+        "name": "Mercedes-Benz C-Razred C180 FUL LED+KAME...",
+        "first_registration": "2015",
+        "kilometers": "161628",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1598",
+        "power_kw": "85",
+        "transmission": "manual",
+        "price": "15.990 €"
+    }]
+}

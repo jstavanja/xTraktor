@@ -1,0 +1,255 @@
+{
+    "items": [{
+        "name": "BMW serija 3: 318d Touring Modern Line X...",
+        "first_registration": "2015",
+        "kilometers": "164223",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "manual",
+        "price": "13.880 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring-navi-pdc-alu1...",
+        "first_registration": "2015",
+        "kilometers": "157200",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "manual",
+        "price": "12.990 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring-Navi-Xenon-Te...",
+        "first_registration": "2015",
+        "kilometers": "195487",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "automatic",
+        "price": "13.350 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring-BIXENON-PANOR...",
+        "first_registration": "2015",
+        "kilometers": "147000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "manual",
+        "price": "13.890 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring",
+        "first_registration": "2015",
+        "kilometers": "184400",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "13.800 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring Sport Line",
+        "first_registration": "2015",
+        "kilometers": "159402",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }, {
+        "name": "BMW serija 3: 318d xDrive Touring",
+        "first_registration": "2016",
+        "kilometers": "149990",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "14.950 €"
+    }, {
+        "name": "BMW serija 3: 318d xDrive Touring Sport ...",
+        "first_registration": "2015",
+        "kilometers": "189000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring ALU 18",
+        "first_registration": "2015",
+        "kilometers": "179000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "automatic",
+        "price": "12.990 €"
+    }, {
+        "name": "BMW serija 3: 318d xDrive Touring Faceli...",
+        "first_registration": "2016",
+        "kilometers": "199745",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "14.750 €"
+    }, {
+        "name": "BMW serija 3: 316d Touring 190PS",
+        "first_registration": "2015",
+        "kilometers": "183000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "140",
+        "transmission": "automatic",
+        "price": "13.790 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring LCI LED 2XPDC...",
+        "first_registration": "2015",
+        "kilometers": "187000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "13.980 €"
+    }, {
+        "name": "BMW serija 3: 318d LCI SPORT FULL LED NA...",
+        "first_registration": "2015",
+        "kilometers": "176240",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "100",
+        "transmission": "automatic",
+        "price": "13.790 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring AVT. SPORTLIN...",
+        "first_registration": "2015",
+        "kilometers": "101000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "140",
+        "transmission": "automatic",
+        "price": "14.990 €"
+    }, {
+        "name": "BMW serija 3: 320d Touring",
+        "first_registration": "2016",
+        "kilometers": "196652",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "manual",
+        "price": null
+    }, {
+        "name": "BMW serija 3: 318d Touring SPORT LED XEN...",
+        "first_registration": "2015",
+        "kilometers": "149776",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "103",
+        "transmission": "automatic",
+        "price": "12.499 €"
+    }, {
+        "name": "BMW serija 3: 2.0 d TOURING AVTOM. PDC A...",
+        "first_registration": "2015",
+        "kilometers": "149023",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "135",
+        "transmission": "automatic",
+        "price": "13.990 €"
+    }, {
+        "name": "BMW serija 3: 320d Touring Avt.",
+        "first_registration": "2015",
+        "kilometers": "189000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "14.799 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring Sport Line Fa...",
+        "first_registration": "2015",
+        "kilometers": "153000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "100",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring NAVI.PDC.TEMP...",
+        "first_registration": "2015",
+        "kilometers": "155000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "automatic",
+        "price": "12.880 €"
+    }, {
+        "name": "BMW serija 3: 318d Business Advantage.1....",
+        "first_registration": "2015",
+        "kilometers": "173030",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": "13.590 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring-Advantage-Nav...",
+        "first_registration": "2015",
+        "kilometers": "166200",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "automatic",
+        "price": "13.470 €"
+    }, {
+        "name": "BMW serija 3: 318d Touring Advantage SLO...",
+        "first_registration": "2015",
+        "kilometers": "131147",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "135",
+        "transmission": "automatic",
+        "price": "14.990 €"
+    }, {
+        "name": "BMW serija 3: 320dA.Msport volan.NaviPro...",
+        "first_registration": "2015",
+        "kilometers": "127421",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "135",
+        "transmission": "manual",
+        "price": null
+    }, {
+        "name": "BMW serija 3: 320dA-Sportline-xenon-M-vo...",
+        "first_registration": "2015",
+        "kilometers": "152000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "110",
+        "transmission": "manual",
+        "price": null
+    }, {
+        "name": "BMW serija 3: 318d Touring -NAVI- PANORA...",
+        "first_registration": "2015",
+        "kilometers": "197665",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "135",
+        "transmission": "manual",
+        "price": "13.500 €"
+    }, {
+        "name": "BMW serija 3: 318d SPORTLINE BI-XENON NA...",
+        "first_registration": "2015",
+        "kilometers": "181000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "135",
+        "transmission": "manual",
+        "price": "12.490 €"
+    }, {
+        "name": "BMW serija 3: 320d Touring",
+        "first_registration": "2015",
+        "kilometers": "111000",
+        "fuel_type": "diesel",
+        "displacement_ccm": "1995",
+        "power_kw": "105",
+        "transmission": "manual",
+        "price": "14.990 €"
+    }]
+}
