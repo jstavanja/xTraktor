@@ -233,24 +233,26 @@ def find_all_matches(html, query_list):
 
 
 if __name__ == '__main__':
-    pageContent = get_html_from_file(
-        '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html',
-        encoding='iso 8859-1')
-    print(parse_rtvslo(pageContent))
+    # pageContent = get_html_from_file(
+    #     '../input/rtvslo.si/Audi A6 50 TDI quattro_ nemir v premijskem razredu - RTVSLO.si.html',
+    #     encoding='iso 8859-1')    
+    # pageContent = get_html_from_file(
+    #     '../input/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html',
+    #     encoding='iso 8859-1')
+    # print(parse_rtvslo(pageContent))
 
-    pageContent = get_html_from_file(
-        '../input/rtvslo.si/Volvo XC 40 D4 AWD momentum_ suvereno med najboljše v razredu - RTVSLO.si.html',
-        encoding='iso 8859-1')
-    print(parse_rtvslo(pageContent))
+    # pageContent = get_html_from_file('../input/overstock.com/jewelry01.html', encoding='iso 8859-1')
+    # print(parse_overstock(pageContent))
 
-    pageContent = get_html_from_file('../input/overstock.com/jewelry01.html', encoding='iso 8859-1')
-    print(parse_overstock(pageContent))
+    # pageContent = get_html_from_file('../input/overstock.com/jewelry02.html', encoding='iso 8859-1')
+    # print(parse_overstock(pageContent))
 
-    pageContent = get_html_from_file('../input/overstock.com/jewelry02.html', encoding='iso 8859-1')
-    print(parse_overstock(pageContent))
-
-    pageContent = get_html_from_file('../input/avtonet/benz.htm', encoding='iso 8859-1')
-    print(parse_avtonet(pageContent))
+    # pageContent = get_html_from_file('../input/avtonet/benz.htm', encoding='iso 8859-1')
+    # print(parse_avtonet(pageContent))
 
     pageContent = get_html_from_file('../input/avtonet/bmw.htm', encoding='iso 8859-1')
-    print(parse_avtonet(pageContent))
+    # print(parse_avtonet(pageContent))
+
+    # f = open("../output/xPath/avtonet2.json","w+")
+    # f.write(parse_avtonet(pageContent))
+    # f.close() 
